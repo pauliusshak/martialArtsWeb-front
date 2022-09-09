@@ -1,9 +1,11 @@
 import React from 'react';
+import MyCarousel from '../components/MyCarousel';
+import Container from 'react-bootstrap/Container';
 
 const GalleryPage = () => {
   return (
-    <div>
-      <h1>GALLERY PAGE</h1>
+    <div className="container">
+      <MyCarousel/>
     </div>
   );
 };

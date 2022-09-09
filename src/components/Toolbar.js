@@ -45,17 +45,17 @@ const Toolbar = ({ userOnline, setUserOnline, getProfilePhoto }) => {
 
       {userOnline === null && (
         <div
-          onClick={() => setWalpaper(`toolbar walpaper${getRandomNum()}`)}
+        
           className="regLogBox"
         >
           {windows !== 'register' && (
             <span onClick={() => setWindow('register')}>
-              <Link to="/register">REGISTER</Link>
+              <Link onClick={() => setWalpaper(`toolbar walpaper${getRandomNum()}`)} to="/register">REGISTER</Link>
             </span>
           )}
           {windows !== 'login' && (
             <span onClick={() => setWindow('login')}>
-              <Link to="/login">LOGIN</Link>
+              <Link onClick={() => setWalpaper(`toolbar walpaper${getRandomNum()}`)} to="/login">LOGIN</Link>
             </span>
           )}
         </div>

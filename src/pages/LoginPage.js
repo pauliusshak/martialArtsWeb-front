@@ -38,7 +38,7 @@ const LoginPage = ({ setUserOnline, setProfilePhoto }) => {
         <h3>Login</h3>
         <input ref={usernameRef} type="text" placeholder="Username.." />
         <input ref={passRef} type="text" placeholder="Password.." />
-        <button onClick={login}>Login</button>
+        <button className='myButton' onClick={login}>Login</button>
         <h5>{getMsg}</h5>
       </div>
     </div>

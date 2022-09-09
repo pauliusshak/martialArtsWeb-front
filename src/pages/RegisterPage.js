@@ -41,7 +41,7 @@ const RegisterPage = () => {
         <input ref={pass1Ref} type="text" placeholder="Password.." />
         <input ref={pass2Ref} type="text" placeholder="Repeat password.." />
         <h5>{getMsg}</h5>
-        <button onClick={register}>REGISTER</button>
+        <button  className='myButton' onClick={register}>REGISTER</button>
       </div>
     </div>
   );
