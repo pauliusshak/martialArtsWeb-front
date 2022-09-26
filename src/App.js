@@ -1,8 +1,8 @@
-import MainContext from "./mainContext/MainContext";
+import MainContext from './mainContext/MainContext';
 import './App.css';
-import {React, useState} from 'react';
+import { React, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Toolbar from './components/Toolbar';
+import Toolbar from './components/toolbar/Toolbar';
 import HomePage from './pages/HomePage';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
@@ -14,8 +14,10 @@ import GalleryPage from './pages/GalleryPage';
 import ReviewsPage from './pages/ReviewsPage';
 
 function App() {
+  const [reviews, setReviews] = useState([]);
   const [getProfilePhoto, setProfilePhoto] = useState('img/profilePic.png');
   const [userOnline, setUserOnline] = useState(null);
+  const [photoChanged, setPhotoChanged] = useState(null);
 
   return (
     <div className="App">
@@ -24,11 +26,19 @@ function App() {
           userOnline,
           getProfilePhoto,
           setProfilePhoto,
+          photoChanged,
+          setPhotoChanged,
+          reviews,
+          setReviews,
         }}
       >
         <BrowserRouter>
           <div>
-            <Toolbar getProfilePhoto={getProfilePhoto} userOnline={userOnline} setUserOnline={setUserOnline}/>
+            <Toolbar
+              getProfilePhoto={getProfilePhoto}
+              userOnline={userOnline}
+              setUserOnline={setUserOnline}
+            />
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/register" element={<RegisterPage />} />
@@ -41,7 +51,10 @@ function App() {
                   />
                 }
               />
-              <Route path="/myProfile" element={<MyProfilePage />} />
+              <Route
+                path="/myProfile"
+                element={<MyProfilePage userOnline={userOnline} />}
+              />
               <Route path="/trainers/:name" element={<TrainersPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/schedule" element={<SchedulePage />} />

@@ -1,0 +1,17 @@
+img {
+  width: 100px;
+  height: 100px;
+}
+.photoChangeMenu {
+  display: flex;
+  flex-direction: column;
+}
+.myProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h5 {
+  color: rgb(235, 65, 65);
+}

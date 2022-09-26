@@ -7,6 +7,7 @@ const RegisterPage = () => {
   const usernameRef = useRef();
   const pass1Ref = useRef();
   const pass2Ref = useRef();
+  const d = new Date();
 
   function register() {
     const user = {
@@ -14,6 +15,7 @@ const RegisterPage = () => {
       pass1: pass1Ref.current.value,
       pass2: pass2Ref.current.value,
       photo: 'img/profilePic.png',
+      dateJoined:d,
     };
     const options = {
       method: 'POST',
@@ -41,7 +43,9 @@ const RegisterPage = () => {
         <input ref={pass1Ref} type="text" placeholder="Password.." />
         <input ref={pass2Ref} type="text" placeholder="Repeat password.." />
         <h5>{getMsg}</h5>
-        <button  className='myButton' onClick={register}>REGISTER</button>
+        <button className="myButton" onClick={register}>
+          REGISTER
+        </button>
       </div>
     </div>
   );

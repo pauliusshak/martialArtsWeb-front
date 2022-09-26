@@ -1,0 +1,151 @@
+.toolbar a:hover {
+  color: rgb(143, 36, 36);
+  box-shadow: inset 200px 0 0 0 white;
+}
+.toolbarNav {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 500px;
+}
+
+.menuBars {
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s linear;
+}
+.menuBars:hover {
+  color: rgb(143, 36, 36);
+}
+.toggleUp {
+  transform: rotate(180deg);
+}
+
+.toggleDown {
+  transform: rotate(0);
+}
+
+.toolbarNav span {
+  height: 25px;
+}
+.toolbar {
+  background-image: url('/../app/public/img/gym.jpg');
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: bold;
+  transition: all 0.5s linear;
+}
+.walpaper1 {
+    background-image: url('/../app/public/img/gym1.jpg');
+  }
+  .walpaper2 {
+    background-image: url('/../app/public/img/gym2.jpg');
+  }
+  .usernameBox {
+    height: 50px;
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+  }
+  .usernameBox img {
+    width: 40px;
+    height: 40px;
+    padding-bottom: 5px;
+  }
+  .homeLogoBox {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    flex-direction: column;
+  }
+  .homeLogoBox span {
+    padding: 0 3px 0 3px;
+    transition: all 0.5s linear;
+    box-shadow: inset 0 0 0 0 white;
+  }
+  .homeLogoBox span:hover {
+    color: rgb(143, 36, 36);
+    box-shadow: inset 100px 0 0 0 white;
+  }
+  .homeLogoBox img {
+    width: 30px;
+    height: 40px;
+    margin-right: 5px;
+  }
+  .regLogBox {
+    align-items: center;
+    height: 117px;
+    display: flex;
+    width: 350px;
+    justify-content: space-around;
+  }
+  .showHiddenMenu {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    animation: open 0.6s linear;
+  }
+  @keyframes open {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .myButton {
+    margin-top: 10px;
+    border: 0.5px solid grey;
+    border-radius: 3px;
+    transition: background 0.2s linear;
+    height: 25px;
+    width: 60%;
+  }
+  
+  .myButton:hover {
+    cursor: pointer;
+    background-color: grey;
+  }
+  .myButton:active {
+    border: 2px solid black;
+  }
+  .logoutLogo {
+    margin: 20px 10px 0 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+    transition: all 0.5s linear, box-shadow 0.7s linear;
+    box-shadow: inset 0 0 0 0 white;
+  }
+  .myHover {
+    transition: all 0.5s linear;
+  }
+  
+  .myHover:hover {
+    color: rgb(143, 36, 36);
+    cursor: pointer;
+  }
+  .positionBottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }

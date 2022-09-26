@@ -1,10 +1,9 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Container from 'react-bootstrap/esm/Container';
 
 export default function MyCarousel() {
   return (
-    <Carousel style={{transition:"all 2s linear"}}>
+    <Carousel style={{ transition: 'all 2s linear' }}>
       <Carousel.Item>
         <img
           className="carousel"

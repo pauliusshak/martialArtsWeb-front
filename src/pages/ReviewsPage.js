@@ -1,9 +1,10 @@
 import React from 'react';
+import Reviews from './../components/Reviews/Reviews';
 
 const ReviewsPage = () => {
   return (
     <div>
-      <h1>REVIEWS PAGE</h1>
+     <Reviews/>
     </div>
   );
 };
